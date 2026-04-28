@@ -7,11 +7,14 @@
     "dev": "npx serve .",
     "build": "echo 'Build complete'"
   },
+  "engines": {
+    "node": "20.x"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
-  "dependencies": {
+  "devDependencies": {
     "heic-convert": "^2.1.0",
     "sharp": "^0.34.5"
   }
