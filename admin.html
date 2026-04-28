@@ -1,0 +1,304 @@
+﻿<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin de Scripts - Marina Pier</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background:
+        radial-gradient(circle at 20% 10%, rgba(74, 181, 176, 0.2), transparent 30%),
+        radial-gradient(circle at 80% 0%, rgba(1, 80, 111, 0.2), transparent 35%),
+        linear-gradient(150deg, #e8f3f6 0%, #d8e7ed 45%, #cfe2e8 100%);
+      color: #0b3d4f;
+      font-family: Inter, Arial, sans-serif;
+      padding: 32px 20px;
+    }
+    .panel {
+      max-width: 1100px;
+      margin: 0 auto;
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 18px;
+      border: 1px solid rgba(255, 255, 255, 0.7);
+      box-shadow: 0 16px 40px rgba(7, 56, 72, 0.15);
+      backdrop-filter: blur(8px);
+      padding: 28px;
+    }
+    h1 {
+      margin: 0 0 10px;
+      font-size: 30px;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+    }
+    p { margin: 0 0 18px; color: #356070; font-size: 17px; }
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+    label {
+      display: block;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+    input,
+    textarea {
+      width: 100%;
+      border: 1px solid #b8cdd5;
+      border-radius: 10px;
+      padding: 12px 14px;
+      font-family: Inter, Arial, sans-serif;
+      font-size: 15px;
+      outline: none;
+      transition: border-color 180ms ease, box-shadow 180ms ease;
+      background: #fff;
+      color: #123f4f;
+    }
+    input:focus,
+    textarea:focus {
+      border-color: #2aa7a0;
+      box-shadow: 0 0 0 3px rgba(42, 167, 160, 0.2);
+    }
+    textarea {
+      min-height: 180px;
+      font-family: Consolas, monospace;
+      font-size: 13px;
+      resize: vertical;
+    }
+    .actions {
+      margin-top: 18px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    button, a.btn {
+      border: 0;
+      border-radius: 10px;
+      padding: 12px 16px;
+      font-weight: 700;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 180ms ease, box-shadow 180ms ease, opacity 180ms ease;
+    }
+    button:hover,
+    a.btn:hover {
+      transform: translateY(-1px);
+      opacity: 0.95;
+      box-shadow: 0 8px 18px rgba(11, 61, 79, 0.2);
+    }
+    .save { background: #1f9a9a; color: #fff; }
+    .clear { background: #d65454; color: #fff; }
+    .open { background: #174e67; color: #fff; }
+    .status {
+      margin-top: 12px;
+      padding: 10px 12px;
+      border-radius: 8px;
+      background: #e7f8f3;
+      color: #106844;
+      display: none;
+    }
+    #loginPanel {
+      max-width: 540px;
+      margin-top: 24px;
+    }
+    #loginPanel .grid {
+      gap: 14px;
+      margin-bottom: 6px;
+    }
+    #loginPanel input {
+      max-width: 320px;
+    }
+    @media (max-width: 640px) {
+      body {
+        padding: 18px 14px;
+      }
+      .panel {
+        padding: 20px 16px;
+        border-radius: 14px;
+      }
+      h1 {
+        font-size: 26px;
+      }
+      p {
+        font-size: 15px;
+      }
+      #loginPanel input {
+        max-width: 100%;
+      }
+      button, a.btn {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="panel" id="adminPanel" style="display:none;">
+    <h1>Painel Admin de Scripts</h1>
+    <p>Cadastre aqui scripts como Pixel, Google Tag Manager e similares. Eles serão aplicados no site automaticamente.</p>
+
+    <div class="grid">
+      <div>
+        <label for="headScripts">Scripts do HEAD</label>
+        <textarea id="headScripts" placeholder="Cole aqui scripts para o &lt;head&gt;..."></textarea>
+      </div>
+      <div>
+        <label for="bodyScripts">Scripts do BODY (início)</label>
+        <textarea id="bodyScripts" placeholder="Cole aqui scripts para o início do &lt;body&gt;..."></textarea>
+      </div>
+      <div>
+        <label for="footerScripts">Scripts do FOOTER (fim da página)</label>
+        <textarea id="footerScripts" placeholder="Cole aqui scripts para o rodapé/final do &lt;body&gt;..."></textarea>
+      </div>
+    </div>
+
+    <div class="actions">
+      <button class="save" id="saveBtn" type="button">Salvar scripts</button>
+      <button class="clear" id="clearBtn" type="button">Limpar tudo</button>
+      <a class="btn open" href="index.html" target="_blank" rel="noopener noreferrer">Abrir site</a>
+    </div>
+
+    <div class="status" id="status"></div>
+  </main>
+
+  <main class="panel" id="loginPanel">
+    <h1>Login Admin</h1>
+    <p>Informe usuário e senha para acessar o painel de scripts.</p>
+    <div class="grid">
+      <div>
+        <label for="loginUser">Usuário</label>
+        <input id="loginUser" type="text" autocomplete="username" />
+      </div>
+      <div>
+        <label for="loginPass">Senha</label>
+        <input id="loginPass" type="password" autocomplete="current-password" />
+      </div>
+    </div>
+    <div class="actions">
+      <button class="save" id="loginBtn" type="button">Entrar</button>
+    </div>
+    <div class="status" id="loginStatus"></div>
+  </main>
+
+  <script>
+    (function () {
+      var STORAGE_KEY = "marina_custom_scripts_v1";
+      var AUTH_KEY = "marina_admin_auth_v1";
+      var ADMIN_USER = "admin";
+      var ADMIN_PASS = "Marina@2026";
+      var headEl = document.getElementById("headScripts");
+      var bodyEl = document.getElementById("bodyScripts");
+      var footerEl = document.getElementById("footerScripts");
+      var status = document.getElementById("status");
+      var adminPanel = document.getElementById("adminPanel");
+      var loginPanel = document.getElementById("loginPanel");
+      var loginStatus = document.getElementById("loginStatus");
+      var loginUser = document.getElementById("loginUser");
+      var loginPass = document.getElementById("loginPass");
+
+      function ensureAdminHeader() {
+        if (document.getElementById("logoutBtn")) return;
+        var actions = document.querySelector(".actions");
+        if (!actions) return;
+        var logoutBtn = document.createElement("button");
+        logoutBtn.id = "logoutBtn";
+        logoutBtn.className = "clear";
+        logoutBtn.type = "button";
+        logoutBtn.textContent = "Sair";
+        logoutBtn.addEventListener("click", function () {
+          localStorage.removeItem(AUTH_KEY);
+          adminPanel.style.display = "none";
+          loginPanel.style.display = "block";
+        });
+        actions.appendChild(logoutBtn);
+      }
+
+      function showLoginStatus(text) {
+        loginStatus.textContent = text;
+        loginStatus.style.display = "block";
+      }
+
+      function isAuthenticated() {
+        return localStorage.getItem(AUTH_KEY) === "ok";
+      }
+
+      function openAdmin() {
+        loginPanel.style.display = "none";
+        adminPanel.style.display = "block";
+        ensureAdminHeader();
+      }
+
+      function tryLogin() {
+        if (loginUser.value.trim() === ADMIN_USER && loginPass.value === ADMIN_PASS) {
+          localStorage.setItem(AUTH_KEY, "ok");
+          loginStatus.style.display = "none";
+          openAdmin();
+          return;
+        }
+        showLoginStatus("Usuário ou senha inválidos.");
+      }
+
+      function showStatus(text) {
+        status.textContent = text;
+        status.style.display = "block";
+        window.setTimeout(function () {
+          status.style.display = "none";
+        }, 2400);
+      }
+
+      function load() {
+        try {
+          var raw = localStorage.getItem(STORAGE_KEY);
+          if (!raw) return;
+          var cfg = JSON.parse(raw);
+          headEl.value = cfg.head || "";
+          bodyEl.value = cfg.body || "";
+          footerEl.value = cfg.footer || "";
+        } catch (e) {
+          showStatus("Não foi possível carregar os scripts salvos.");
+        }
+      }
+
+      function save() {
+        var payload = {
+          head: headEl.value.trim(),
+          body: bodyEl.value.trim(),
+          footer: footerEl.value.trim()
+        };
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(payload));
+        showStatus("Scripts salvos com sucesso.");
+      }
+
+      function clearAll() {
+        localStorage.removeItem(STORAGE_KEY);
+        headEl.value = "";
+        bodyEl.value = "";
+        footerEl.value = "";
+        showStatus("Scripts removidos.");
+      }
+
+      document.getElementById("saveBtn").addEventListener("click", save);
+      document.getElementById("clearBtn").addEventListener("click", clearAll);
+      document.getElementById("loginBtn").addEventListener("click", tryLogin);
+      loginPass.addEventListener("keydown", function (event) {
+        if (event.key === "Enter") {
+          tryLogin();
+        }
+      });
+
+      if (isAuthenticated()) {
+        openAdmin();
+      } else {
+        loginPanel.style.display = "block";
+      }
+
+      load();
+    })();
+  </script>
+</body>
+</html>

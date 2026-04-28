@@ -1,0 +1,39 @@
+﻿const fs = require('fs');
+const path = require('path');
+const sharp = require('sharp');
+
+const root = process.cwd();
+const assets = path.join(root, 'assets', 'img');
+
+function walk(dir) {
+  const out = [];
+  for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+    const full = path.join(dir, entry.name);
+    if (entry.isDirectory()) out.push(...walk(full));
+    else out.push(full);
+  }
+  return out;
+}
+
+(async () => {
+  const files = walk(assets).filter((f) => f.toLowerCase().endsWith('.webp'));
+  const failed = [];
+  let ok = 0;
+
+  for (const file of files) {
+    try {
+      const buf = await sharp(file).blur(0.35).webp({ quality: 82, effort: 6 }).toBuffer();
+      const tmp = file + '.rewrite';
+      fs.writeFileSync(tmp, buf);
+      try { fs.unlinkSync(file); } catch (e) {}
+      fs.renameSync(tmp, file);
+      ok += 1;
+    } catch (e) {
+      failed.push({ file, error: String(e.message || e) });
+    }
+  }
+
+  const report = { processed: files.length, ok, fail: failed.length, failed };
+  fs.writeFileSync('soften-report.json', JSON.stringify(report, null, 2));
+  console.log(JSON.stringify({ processed: files.length, ok, fail: failed.length }, null, 2));
+})();

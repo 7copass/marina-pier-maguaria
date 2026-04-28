@@ -1,0 +1,87 @@
+{
+  "processed": 75,
+  "ok": 55,
+  "fail": 20,
+  "failed": [
+    {
+      "file": "C:\\Users\\Cassiano\\Desktop\\CODEX\\MARINA PIER\\assets\\img\\Container-1.webp",
+      "error": "EPERM: operation not permitted, rename 'C:\\Users\\Cassiano\\Desktop\\CODEX\\MARINA PIER\\assets\\img\\Container-1.webp.rewrite' -> 'C:\\Users\\Cassiano\\Desktop\\CODEX\\MARINA PIER\\assets\\img\\Container-1.webp'"
+    },
+    {
+      "file": "C:\\Users\\Cassiano\\Desktop\\CODEX\\MARINA PIER\\assets\\img\\Container-1.webp.tmp.webp",
+      "error": "EPERM: operation not permitted, rename 'C:\\Users\\Cassiano\\Desktop\\CODEX\\MARINA PIER\\assets\\img\\Container-1.webp.tmp.webp.rewrite' -> 'C:\\Users\\Cassiano\\Desktop\\CODEX\\MARINA PIER\\assets\\img\\Container-1.webp.tmp.webp'"
+    },
+    {
+      "file": "C:\\Users\\Cassiano\\Desktop\\CODEX\\MARINA PIER\\assets\\img\\Container-2.webp",
+      "error": "EPERM: operation not permitted, rename 'C:\\Users\\Cassiano\\Desktop\\CODEX\\MARINA PIER\\assets\\img\\Container-2.webp.rewrite' -> 'C:\\Users\\Cassiano\\Desktop\\CODEX\\MARINA PIER\\assets\\img\\Container-2.webp'"
+    },
+    {
+      "file": "C:\\Users\\Cassiano\\Desktop\\CODEX\\MARINA PIER\\assets\\img\\Container-3.webp",
+      "error": "EPERM: operation not permitted, rename 'C:\\Users\\Cassiano\\Desktop\\CODEX\\MARINA PIER\\assets\\img\\Container-3.webp.rewrite' -> 'C:\\Users\\Cassiano\\Desktop\\CODEX\\MARINA PIER\\assets\\img\\Container-3.webp'"
+    },
+    {
+      "file": "C:\\Users\\Cassiano\\Desktop\\CODEX\\MARINA PIER\\assets\\img\\Container-4.webp",
+      "error": "EPERM: operation not permitted, rename 'C:\\Users\\Cassiano\\Desktop\\CODEX\\MARINA PIER\\assets\\img\\Container-4.webp.rewrite' -> 'C:\\Users\\Cassiano\\Desktop\\CODEX\\MARINA PIER\\assets\\img\\Container-4.webp'"
+    },
+    {
+      "file": "C:\\Users\\Cassiano\\Desktop\\CODEX\\MARINA PIER\\assets\\img\\Container-5.webp",
+      "error": "EPERM: operation not permitted, rename 'C:\\Users\\Cassiano\\Desktop\\CODEX\\MARINA PIER\\assets\\img\\Container-5.webp.rewrite' -> 'C:\\Users\\Cassiano\\Desktop\\CODEX\\MARINA PIER\\assets\\img\\Container-5.webp'"
+    },
+    {
+      "file": "C:\\Users\\Cassiano\\Desktop\\CODEX\\MARINA PIER\\assets\\img\\Container-6.webp",
+      "error": "EPERM: operation not permitted, rename 'C:\\Users\\Cassiano\\Desktop\\CODEX\\MARINA PIER\\assets\\img\\Container-6.webp.rewrite' -> 'C:\\Users\\Cassiano\\Desktop\\CODEX\\MARINA PIER\\assets\\img\\Container-6.webp'"
+    },
+    {
+      "file": "C:\\Users\\Cassiano\\Desktop\\CODEX\\MARINA PIER\\assets\\img\\Container-7.webp",
+      "error": "EPERM: operation not permitted, rename 'C:\\Users\\Cassiano\\Desktop\\CODEX\\MARINA PIER\\assets\\img\\Container-7.webp.rewrite' -> 'C:\\Users\\Cassiano\\Desktop\\CODEX\\MARINA PIER\\assets\\img\\Container-7.webp'"
+    },
+    {
+      "file": "C:\\Users\\Cassiano\\Desktop\\CODEX\\MARINA PIER\\assets\\img\\Container-8.webp",
+      "error": "EPERM: operation not permitted, rename 'C:\\Users\\Cassiano\\Desktop\\CODEX\\MARINA PIER\\assets\\img\\Container-8.webp.rewrite' -> 'C:\\Users\\Cassiano\\Desktop\\CODEX\\MARINA PIER\\assets\\img\\Container-8.webp'"
+    },
+    {
+      "file": "C:\\Users\\Cassiano\\Desktop\\CODEX\\MARINA PIER\\assets\\img\\Container.webp",
+      "error": "EPERM: operation not permitted, rename 'C:\\Users\\Cassiano\\Desktop\\CODEX\\MARINA PIER\\assets\\img\\Container.webp.rewrite' -> 'C:\\Users\\Cassiano\\Desktop\\CODEX\\MARINA PIER\\assets\\img\\Container.webp'"
+    },
+    {
+      "file": "C:\\Users\\Cassiano\\Desktop\\CODEX\\MARINA PIER\\assets\\img\\fotos da marina\\prints da conversa do cliente\\Captura de tela 2026-04-27 152637.webp",
+      "error": "EPERM: operation not permitted, rename 'C:\\Users\\Cassiano\\Desktop\\CODEX\\MARINA PIER\\assets\\img\\fotos da marina\\prints da conversa do cliente\\Captura de tela 2026-04-27 152637.webp.rewrite' -> 'C:\\Users\\Cassiano\\Desktop\\CODEX\\MARINA PIER\\assets\\img\\fotos da marina\\prints da conversa do cliente\\Captura de tela 2026-04-27 152637.webp'"
+    },
+    {
+      "file": "C:\\Users\\Cassiano\\Desktop\\CODEX\\MARINA PIER\\assets\\img\\fotos da marina\\prints da conversa do cliente\\Captura de tela 2026-04-27 152644.webp",
+      "error": "EPERM: operation not permitted, rename 'C:\\Users\\Cassiano\\Desktop\\CODEX\\MARINA PIER\\assets\\img\\fotos da marina\\prints da conversa do cliente\\Captura de tela 2026-04-27 152644.webp.rewrite' -> 'C:\\Users\\Cassiano\\Desktop\\CODEX\\MARINA PIER\\assets\\img\\fotos da marina\\prints da conversa do cliente\\Captura de tela 2026-04-27 152644.webp'"
+    },
+    {
+      "file": "C:\\Users\\Cassiano\\Desktop\\CODEX\\MARINA PIER\\assets\\img\\fotos da marina\\prints da conversa do cliente\\Captura de tela 2026-04-27 152655.webp",
+      "error": "EPERM: operation not permitted, rename 'C:\\Users\\Cassiano\\Desktop\\CODEX\\MARINA PIER\\assets\\img\\fotos da marina\\prints da conversa do cliente\\Captura de tela 2026-04-27 152655.webp.rewrite' -> 'C:\\Users\\Cassiano\\Desktop\\CODEX\\MARINA PIER\\assets\\img\\fotos da marina\\prints da conversa do cliente\\Captura de tela 2026-04-27 152655.webp'"
+    },
+    {
+      "file": "C:\\Users\\Cassiano\\Desktop\\CODEX\\MARINA PIER\\assets\\img\\fotos da marina\\prints da conversa do cliente\\Captura de tela 2026-04-27 152705.webp",
+      "error": "EPERM: operation not permitted, rename 'C:\\Users\\Cassiano\\Desktop\\CODEX\\MARINA PIER\\assets\\img\\fotos da marina\\prints da conversa do cliente\\Captura de tela 2026-04-27 152705.webp.rewrite' -> 'C:\\Users\\Cassiano\\Desktop\\CODEX\\MARINA PIER\\assets\\img\\fotos da marina\\prints da conversa do cliente\\Captura de tela 2026-04-27 152705.webp'"
+    },
+    {
+      "file": "C:\\Users\\Cassiano\\Desktop\\CODEX\\MARINA PIER\\assets\\img\\fotos da marina\\prints da conversa do cliente\\Captura de tela 2026-04-27 152718.webp",
+      "error": "EPERM: operation not permitted, rename 'C:\\Users\\Cassiano\\Desktop\\CODEX\\MARINA PIER\\assets\\img\\fotos da marina\\prints da conversa do cliente\\Captura de tela 2026-04-27 152718.webp.rewrite' -> 'C:\\Users\\Cassiano\\Desktop\\CODEX\\MARINA PIER\\assets\\img\\fotos da marina\\prints da conversa do cliente\\Captura de tela 2026-04-27 152718.webp'"
+    },
+    {
+      "file": "C:\\Users\\Cassiano\\Desktop\\CODEX\\MARINA PIER\\assets\\img\\Image (Marina Pier Maguari).webp",
+      "error": "EPERM: operation not permitted, rename 'C:\\Users\\Cassiano\\Desktop\\CODEX\\MARINA PIER\\assets\\img\\Image (Marina Pier Maguari).webp.rewrite' -> 'C:\\Users\\Cassiano\\Desktop\\CODEX\\MARINA PIER\\assets\\img\\Image (Marina Pier Maguari).webp'"
+    },
+    {
+      "file": "C:\\Users\\Cassiano\\Desktop\\CODEX\\MARINA PIER\\assets\\img\\ImageWithFallback-1.webp",
+      "error": "EPERM: operation not permitted, rename 'C:\\Users\\Cassiano\\Desktop\\CODEX\\MARINA PIER\\assets\\img\\ImageWithFallback-1.webp.rewrite' -> 'C:\\Users\\Cassiano\\Desktop\\CODEX\\MARINA PIER\\assets\\img\\ImageWithFallback-1.webp'"
+    },
+    {
+      "file": "C:\\Users\\Cassiano\\Desktop\\CODEX\\MARINA PIER\\assets\\img\\ImageWithFallback-2.webp",
+      "error": "EPERM: operation not permitted, rename 'C:\\Users\\Cassiano\\Desktop\\CODEX\\MARINA PIER\\assets\\img\\ImageWithFallback-2.webp.rewrite' -> 'C:\\Users\\Cassiano\\Desktop\\CODEX\\MARINA PIER\\assets\\img\\ImageWithFallback-2.webp'"
+    },
+    {
+      "file": "C:\\Users\\Cassiano\\Desktop\\CODEX\\MARINA PIER\\assets\\img\\ImageWithFallback.webp",
+      "error": "EPERM: operation not permitted, rename 'C:\\Users\\Cassiano\\Desktop\\CODEX\\MARINA PIER\\assets\\img\\ImageWithFallback.webp.rewrite' -> 'C:\\Users\\Cassiano\\Desktop\\CODEX\\MARINA PIER\\assets\\img\\ImageWithFallback.webp'"
+    },
+    {
+      "file": "C:\\Users\\Cassiano\\Desktop\\CODEX\\MARINA PIER\\assets\\img\\source\\LOGO.png.webp",
+      "error": "EPERM: operation not permitted, rename 'C:\\Users\\Cassiano\\Desktop\\CODEX\\MARINA PIER\\assets\\img\\source\\LOGO.png.webp.rewrite' -> 'C:\\Users\\Cassiano\\Desktop\\CODEX\\MARINA PIER\\assets\\img\\source\\LOGO.png.webp'"
+    }
+  ]
+}
